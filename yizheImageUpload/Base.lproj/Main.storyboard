@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HcQ-6f-u0Z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="LnD-aD-16q">
+            <objects>
+                <viewController id="HcQ-6f-u0Z" customClass="ViewController" customModule="yizheyunImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Cu-E8-cX3"/>
+                        <viewControllerLayoutGuide type="bottom" id="U93-9U-EAD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xqo-Za-EV0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jf-ze-NmG">
+                                <rect key="frame" x="156" y="394" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="选择照片"/>
+                                <connections>
+                                    <action selector="imageBtnTap:" destination="HcQ-6f-u0Z" eventType="touchUpInside" id="mys-k5-tS2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FGw-AO-RaF">
+                                <rect key="frame" x="87" y="130" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Keo-He-2py"/>
+                                    <constraint firstAttribute="width" constant="200" id="d6P-RF-s5v"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zYX-7F-3yr">
+                                <rect key="frame" x="147" y="547" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="IPC-fM-aKM"/>
+                                    <constraint firstAttribute="width" constant="80" id="u76-nR-jMO"/>
+                                </constraints>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XHH-Jd-EqA">
+                                <rect key="frame" x="0.0" y="28" width="375" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.29254740480000002" green="0.74909478429999998" blue="0.94018572570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zYX-7F-3yr" firstAttribute="centerX" secondItem="Xqo-Za-EV0" secondAttribute="centerX" id="IU0-Mk-pGV"/>
+                            <constraint firstAttribute="bottom" secondItem="zYX-7F-3yr" secondAttribute="bottom" constant="40" id="Qz5-NQ-NjP"/>
+                            <constraint firstItem="FGw-AO-RaF" firstAttribute="top" secondItem="7Cu-E8-cX3" secondAttribute="bottom" constant="110" id="TKG-ZQ-M8T"/>
+                            <constraint firstItem="FGw-AO-RaF" firstAttribute="centerX" secondItem="Xqo-Za-EV0" secondAttribute="centerX" id="Y5M-2M-cua"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="FGw-AO-RaF" id="Qem-c8-Hzl"/>
+                        <outlet property="progressView" destination="XHH-Jd-EqA" id="9TU-xI-1PO"/>
+                        <outlet property="smallimage" destination="zYX-7F-3yr" id="IiY-Vb-lde"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NNQ-Ve-Rxc" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="800"/>
+        </scene>
+    </scenes>
+</document>
